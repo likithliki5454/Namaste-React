@@ -8,11 +8,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const header = React.createElement('div', { id: "parent" },
-    React.createElement('div', { id: "child1" }, 
-    React.createElement('h1', {}, 'am h1'))
+const HelW=()=>{
+    return(
+        <p>nested</p>
     )
+}
+
+const HeaderComp=()=>{
+    return(
+        <div id='container'>
+        <HelW/>
+        <h1>Hello Word</h1>
+        </div>
+    )
+}
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(header)
+root.render(<HeaderComp/>)
