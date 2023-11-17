@@ -4,7 +4,7 @@
   "description": "this is n react",
   "scripts": {
     "test": "jest",
-    "start":"npx parcel index.html"
+    "start": "npx parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0"
   }
 }
