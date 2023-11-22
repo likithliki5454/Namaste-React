@@ -67,10 +67,16 @@
     border: 1px solid lightblue;
     width: 400px;
     border-radius: 10px;
-    height: 460px;
+    /* height: 460px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.card:hover{
+border: 1px solid rgb(49, 143, 231);
+transform: scale(1.02);
+transition: ease-in-out 0.2s;
 }
 
 .card>img{
@@ -100,4 +106,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.log{
+    padding: 5px;
+}
+
+.card-shimmer{
+    width: 400px;
+    height: 400px;
+    background-color: #0f0f0f0f;
 }

@@ -72,12 +72,28 @@ const mockData = [
       rating: 4.8,
     },
     {
-      index: 0,
+      index: 10,
       url: "https://source.unsplash.com/random/?icecream",
       time: "25 mins",
       item_name: "Ice Cream",
       provider: "Dessert Foods",
       rating: 5.0,
+    },
+    {
+      index:11,
+      url: "https://source.unsplash.com/random/?biriyani",
+      time: "55 mins",
+      item_name: "biriyani",
+      provider: "Indian Foods",
+      rating: 5.0,
+    },
+    {
+      index: 12,
+      url: "https://source.unsplash.com/random/?friedrice",
+      time: "35 mins",
+      item_name: "Fried Rice",
+      provider: "Ashoka Foods",
+      rating: 4.8,
     },
   ];
 

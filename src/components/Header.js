@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { AiOutlineShoppingCart} from "react-icons/ai";
+
 const Header = () => {
+  const [logins, setlogins] = useState('LogIn')
+
+
+  const handleLogin=()=>{
+   logins==='LogIn'? setlogins('LogOut'):setlogins('LogIn')
+  }
     return (
       <div className="nav-bar">
         <div className="logo-border">
@@ -15,8 +23,9 @@ const Header = () => {
             <li>About</li>
             <li>Career</li>
             <li>Contact us</li>
-          </ul>
-          <AiOutlineShoppingCart className="cart" />
+            </ul>
+            <AiOutlineShoppingCart className="cart" />
+            <button onClick={handleLogin} className="log">{logins}</button>
         </div>
       </div>
     );
