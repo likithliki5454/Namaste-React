@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Shimmer = () => {
+
+  
   return (
     <div className="container">
     <div className="card-shimmer">
