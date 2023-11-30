@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 
 
-const Body = (data) => {
+const Body = () => {
 
   const [search, setSearch] = useState([]);
   const [initial, setinitial] = useState([])
@@ -19,7 +19,6 @@ const Body = (data) => {
   const fetchdata = async () => {
     var datafetched = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
     const response = await datafetched.json()
-    console.log(response.data.cards[2].card.card.gridElements)
     setSearch(response.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
     setinitial(response.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
   }
@@ -42,12 +41,17 @@ const Body = (data) => {
 
   const searchBtn=()=>{
     const filtersearch = initial.filter((item) => item.info.name.toLowerCase().includes(svalue.toLowerCase()));
-    setSearch(filtersearch)
+    if(filtersearch.length<1){
+      setSearch(initial)
+    }
+    else{
+      setSearch(filtersearch)  
+    }
   }
 
   if (search.length === 0) {
     return (
-      <Shimmer />
+     <Shimmer/>
     )
   }
 

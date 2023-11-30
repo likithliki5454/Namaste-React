@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import ResturantCard from "./ResuturantCard";
 const ResturantContainer = ({ data }) => {
     return (
       <div className="container">
-        {data.map((items) => (
-          <ResturantCard key={items.index} {...items} />
+        {data.map((items) => (   
+         <Link  key={items.index}  to={"/RestroMenu/"+items.info.id}> <ResturantCard {...items} /></Link> 
         ))}
       </div>
     );

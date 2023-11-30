@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineShoppingCart} from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [logins, setlogins] = useState('LogIn')
@@ -19,10 +20,11 @@ const Header = () => {
         </div>
         <div className="nav-items">
           <ul className="items">
-            <li>Home</li>
-            <li>About</li>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/about'><li>About</li></Link>
             <li>Career</li>
-            <li>Contact us</li>
+           <Link to='/contactus'><li>Contact us</li></Link> 
+            
             </ul>
             <AiOutlineShoppingCart className="cart" />
             <button onClick={handleLogin} className="log">{logins}</button>
